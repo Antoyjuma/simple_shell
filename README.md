@@ -2,6 +2,8 @@
 
 This is a simple UNIX command-line interpreter project for the ALX SE Foundations curriculum. The goal is to create a basic shell that can execute commands, handle built-in functionalities, and implement various advanced features.
 
+![image](https://github.com/Antoyjuma/simple_shell/assets/122806822/8c75565d-4d72-4889-8c84-fad0f2cda6b1)
+
 ## Table of Contents
 
 - [Overview](#overview)
