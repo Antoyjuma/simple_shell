@@ -71,7 +71,9 @@ simple_shell
 To build the shell, use the provided Makefile. Open a terminal and navigate to the project root directory. Run the following command:
 
 ```bash
-make
+find . -type f -name "*.c" -exec gcc -Wall -Werror -Wextra -pedantic -std=gnu89 {} -o {}.out \;
+or
+gcc -Wall -Werror -Wextra -pedantic -std=gnu89 $(find . -type f -name "*.c") -o hsh
 ```
 * This will compile the source code and generate the executable.
 
