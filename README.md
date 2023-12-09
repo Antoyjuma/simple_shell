@@ -22,37 +22,52 @@ The Simple Shell project is a part of the ALX SE Foundations curriculum. It invo
 ```bash
 simple_shell
 │
-├── README.md
 ├── AUTHORS
-├── .gitignore
 ├── Makefile
-├── src
-│ ├── shell.c
-│ ├── prompt.c
-│ ├── execute.c
-│ ├── builtin.c
-│ ├── helper_functions.c
-│ └── parser.c
-├── include
-│ └── shell.h
-├── test
-│ └── test_shell.c
-├── builtins
-│ ├── alias.c
-│ ├── setenv.c
-│ └── unsetenv.c
-├── variables
-│ └── variables.c
-├── logic_operators
-│ └── logical_operators.c
-├── comments
-│ └── comments.c
+├── README.md
 ├── advanced
-│ └── (additional advanced features)
+│   ├── parse_cmd.c
+│   ├── path_finders.c
+│   ├── stdin_cmd_exec.c
+│   └── strtok.c
+├── builtins
+│   ├── alias.c
+│   ├── builtin_check_handlers.c
+│   ├── builtin_commands.c
+│   ├── builtin_exec.c
+│   ├── builtin_functions.c
+│   ├── builtin_helpers.c
+│   ├── getline.c
+│   ├── setenv.c
+│   └── unsetenv.c
+├── comments
+│   └── comments.c
+├── environment
+│   └── handlers.c
+├── handlers
+│   ├── env_all_helpers.c
+│   ├── env_help_handlers.c
+│   ├── error_handlers.c
+│   ├── file_handlers.c
+│   └── memory_handlers.c
+├── include
+│   └── shell.h
+├── inputs
+├── logic_operators
+│   └── logical_operators.c
+├── src
+│   ├── builtin.c
+│   ├── execute.c
+│   ├── helper_function.c
+│   ├── parser.c
+│   ├── prompt.c
+│   └── shell.c
 └── tests
-├── test_shell.c
-└── test_scripts
-└── (shell scripts for testing)
+    ├── test_scripts
+    │   └── (shell scripts for testing)
+    ├── test_shell.c
+    └── history.c
+
 ```
 
 
