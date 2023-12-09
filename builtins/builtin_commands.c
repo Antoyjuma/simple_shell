@@ -120,7 +120,7 @@ int history_dis(__attribute__((unused)) char **c, __attribute__((unused)) int st
         return (-1);  // Return -1 if opening the file fails
     }
     // Read each line from the history file
-    while ((getline(&line, &len, fp)) != -1)
+    while ((_getline(&line, &len, fp)) != -1)
     {
         counter++;  // Increment the counter for each history entry
         er = itoa(counter);  // Convert the counter to a string

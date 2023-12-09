@@ -1,10 +1,10 @@
 #include "../include/shell.h"
 
 /**
- * getline - Read input from standard input by the user.
+ * _getline - Read input from standard input by the user.
  * Return: The input on a buffer.
  */
-char *getline()
+char *_getline()
 {
 	// Declare variables
 	int i, rd, buffsize = BUFSIZE;
@@ -36,7 +36,7 @@ char *getline()
 		// Store the character in the buffer
 		buffer[i] = c;
 
-		// Check if the buffer starts with a newline
+		// Check	 if the buffer starts with a newline
 		if (buffer[0] == '\n')
 			return (enter(buffer));
 

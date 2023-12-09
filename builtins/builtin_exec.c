@@ -123,7 +123,7 @@ int history_dis(__attribute__((unused)) char **c, __attribute__((unused)) int st
     while ((getline(&line, &len, fp)) != -1)
     {
         counter++;  // Increment the counter for each history entry
-        er = itoa(counter);  // Convert the counter to a string
+        er = _itoa(counter);  // Convert the counter to a string
         PRINT(er);  // Print the counter
         free(er);  // Free the allocated memory for the counter string
         PRINT(" ");
