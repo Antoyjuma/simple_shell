@@ -48,7 +48,7 @@ int main(__attribute__((unused)) int argc, char **argv)
             cmd = parse_cmd(commands[i]);
 
             // Check if the command is 'exit'
-            if (strcmp(cmd[0], "exit") == 0)
+            if (_strcmp(cmd[0], "exit") == 0)
             {
                 free(commands);
                 // Handle 'exit' built-in command

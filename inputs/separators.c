@@ -20,7 +20,7 @@ char **separators(char *input)
     int buffsize = BUFSIZE;
 
     /* Check for empty or null input */
-    if (input[0] == ' ' && input[_strlen(input)] == ' ')
+    if (input[0] == ' ' && input[__strlen(input)] == ' ')
         exit(0);
     if (input == NULL)
         return (NULL);

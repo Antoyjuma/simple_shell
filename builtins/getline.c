@@ -92,7 +92,7 @@ char *space_key(char *str)
 	char *buff;
 
 	// Allocate memory for the modified string
-	buff = malloc(sizeof(char) * (_strlen(str) + 1));
+	buff = malloc(sizeof(char) * (__strlen(str) + 1));
 	if (buff == NULL)
 	{
 		free(buff);

@@ -22,12 +22,12 @@ void error_not_found(char *input, int counter, char **argv)
 }
 
 /**
- * cus_prnt_error - Prints a custom error message for an illegal number
+ * _perror - Prints a custom error message for an illegal number
  * @argv: Arguments before the program starts (argv[0] == Shell Program Name)
  * @c: Error Count
  * @cmd: Array of parsed command strings
  */
-void cus_prnt_error(char **argv, int c, char **cmd);
+void _perror(char **argv, int c, char **cmd);
 {
     char *er = _itoa(c);
 
