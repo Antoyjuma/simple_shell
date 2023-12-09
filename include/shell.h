@@ -24,10 +24,24 @@ void prompt(void);
 char *space_key(char *str);
 char *enter_key(char *string);
 void hashtag_handlers(char *buff);
+unsigned int delimeters(char c, const char *str);
+int history(char *input);
+char *strtok(char *str, const char *delim)
+char **separators(char *input);
 
-/* Environment Handlers */ 
+/* Environment Handlers*/ 
 extern char **environ;
 void set_environ(char **envi);
 void free_environ(char **env);
+
+/* Error Handlers */
+void error_not_found(char *input, int counter, char **argv);
+void cus_prnt_error(char **argv, int c, char **cmd);
+void error_opening(char **argv, int c);
+
+/* Functions */
+void prnt_num(unsigned int n);
+void prnt_num_int(int n);
+int prnt_echo(char **cmd);
 
 #endif /* SHELL_H */

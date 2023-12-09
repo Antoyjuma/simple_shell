@@ -1,7 +1,7 @@
 #include "../include/shell.h"
 
 /**
- * create_envi - Creates an array of Environment Variables.
+ * set_environ - Creates an array of Environment Variables.
  * @envi: Array to store Environment Variables.
  */
 void set_environ(char **envir)
@@ -18,7 +18,7 @@ void set_environ(char **envir)
 }
 
 /**
- * free_env - Frees the memory of the created Environment Variables array.
+ * free_environ - Frees the memory of the created Environment Variables array.
  * @env: Array of Environment variables.
  */
 void free_environ(char **env)

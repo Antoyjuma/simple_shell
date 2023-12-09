@@ -1,7 +1,7 @@
 #include "../include/shell.h"
 
 /**
- * _getline - Read input from standard input by the user.
+ * getline - Read input from standard input by the user.
  * Return: The input on a buffer.
  */
 char *getline()
@@ -62,7 +62,7 @@ char *getline()
 	free(buffer);
 
 	// Handle hashtags in the buffer
-	hashtag_handler(buf);
+	hashtag_handlers(buf);
 
 	// Return the processed buffer
 	return (buf);

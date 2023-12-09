@@ -29,7 +29,7 @@ int main(__attribute__((unused)) int argc, char **argv)
             prompt();
 
         // Read user input
-        input = _getline();
+        input = getline();
 
         // Skip empty lines
         if (input[0] == '\0')
@@ -39,7 +39,7 @@ int main(__attribute__((unused)) int argc, char **argv)
         history(input);
 
         // Split multiple commands separated by semicolons
-        commands = separator(input);
+        commands = separators(input);
 
         // Loop through each command
         for (i = 0; commands[i] != NULL; i++)
@@ -48,7 +48,7 @@ int main(__attribute__((unused)) int argc, char **argv)
             cmd = parse_cmd(commands[i]);
 
             // Check if the command is 'exit'
-            if (_strcmp(cmd[0], "exit") == 0)
+            if (strcmp(cmd[0], "exit") == 0)
             {
                 free(commands);
                 // Handle 'exit' built-in command
