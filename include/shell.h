@@ -24,7 +24,7 @@ void prompt(void);
 char *space_key(char *str);
 char *enter_key(char *string);
 void hashtag_handlers(char *buff);
-unsigned int delimeters(char c, const char *str);
+unsigned int delimeter(char c, const char *str);
 int history(char *input);
 char *strtok(char *str, const char *delim)
 char **separators(char *input);
@@ -39,12 +39,31 @@ void error_not_found(char *input, int counter, char **argv);
 void _perror(char **argv, int c, char **cmd);
 void error_opening(char **argv, int c);
 
+/* File Handlers*/
+void read_file(char *file, char **argv);
+void execute_file(char *line, int count, FILE *fp, char **argv);
+void exit_status_file(char **cmd, char *line, FILE *fd);
+
+/* Memory Handlers */
+void free_env(char **env);
+void *fill_array(void *a, int el, unsigned int len);
+char *_memcpy(char *dest, char *src, unsigned int n);
+void *_calloc(unsigned int size);
+void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size);
+void free_mem(char **input, char *line);
+
 /* Functions */
 void prnt_num(unsigned int n);
 void prnt_num_int(int n);
 int prnt_echo(char **cmd);
 
-/* Builts */
+/* parsed functions*/
+char **parse_cmd(char *input);
+int handle_builtins(char **cmd, int er);
+int check_cmd(char **cmd, char *input, int c, char **argv);
+void signal_to_handle(int sig);
+
+/* Builtins */
 int check_builtins(char **cmd);
 int builtins_handlers(char **cmd, int st);
 void exit_builtins(char **cmd, char *input, char **argv, int c,
@@ -55,6 +74,27 @@ int dis_env(__attribute__((unused)) char **cmd,
 int echo_cases(char **cmd, int st);
 int history_dis(__attribute__((unused))char **c,
 		__attribute__((unused)) int st);
+
+/*Builtins Command Structure*/
+/**
+ * struct _builtin - Defines a struct representing built-in commands
+ *                  with associated implementation functions.
+ *
+ * @command: The name of the built-in command.
+ * @function: Pointer to the function that implements the behavior
+ *            of the corresponding built-in command.
+ */
+typedef struct _builtin
+{
+	char *command;           /* Name of the built-in command */
+	int (*function)(char **line, int st); /* Function pointer for implementation */
+} builtin;
+
+
+/*path finders*/
+int path_cmd(char **cmd);
+char *build(char *token, char *value);
+char *_getenv(char *name);
 
 /* Handlers && Stings */
 
