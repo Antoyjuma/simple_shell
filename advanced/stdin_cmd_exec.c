@@ -1,4 +1,4 @@
-#include "official0mega.h"
+#include "../include/shell.h"
 
 /**
  * check_cmd - Executes commands found in the predefined path.
@@ -14,47 +14,57 @@ int check_cmd(char **cmd, char *input, int c, char **argv)
 	int wstatus;
 	pid_t pid;
 
-	/*  Check if command is NULL */
+	/*  Check if command is NULL
+ */
 	if (*cmd == NULL)
 		return (EXIT_FAILURE);
 
-	/*  Create a child process */
+	/*  Create a child process
+ */
 	pid = fork();
 
-	/*  Check if fork failed */
+	/*  Check if fork failed
+ */
 	if (pid == -1)
 	{
 		perror("Error");
 		return (-1);
 	}
 
-	/*  Child process */
+	/*  Child process
+ */
 	if (pid == 0)
 	{
-		/*  If the command is not a relative or absolute path, search in PATH */
+		/*  If the command is not a relative or absolute path, search in PATH
+ */
 		if (_strncmp(*cmd, "./", 2) != 0 && _strncmp(*cmd, "/", 1) != 0)
 			path_cmd(cmd);
 
-		/*  Check if the command is executable */
+		/*  Check if the command is executable
+ */
 		if (access(cmd[0], R_OK) != 0)
 		{
-			/*  Print error message and exit with status 127 */
+			/*  Print error message and exit with status 127
+ */
 			print_error(cmd[0], c, argv);
 			free_all(cmd, input);
 			exit(127);
 		}
 
-		/*  Execute the command in the child process */
+		/*  Execute the command in the child process
+ */
 		if (execve(*cmd, cmd, environ) == -1)
 			return (2);
 		else
 			return (0);
 	}
 
-	/*  Parent process */
+	/*  Parent process
+ */
 	wait(&wstatus);
 
-	/*  Check if the child process exited normally */
+	/*  Check if the child process exited normally
+ */
 	if (WIFEXITED(wstatus))
 	{
 		if (WEXITSTATUS(wstatus) == 0)
@@ -65,7 +75,8 @@ int check_cmd(char **cmd, char *input, int c, char **argv)
 			return (127);
 	}
 
-	/*  Return 127 if child process did not exit normally */
+	/*  Return 127 if child process did not exit normally
+ */
 	return (127);
 }
 
@@ -76,7 +87,8 @@ int check_cmd(char **cmd, char *input, int c, char **argv)
  */
 void signal_to_handle(int sig)
 {
-	/*  Handle SIGINT (Ctrl+C) signal by printing a new prompt */
+	/*  Handle SIGINT (Ctrl+C) signal by printing a new prompt
+ */
 	if (sig == SIGINT)
 	{
 		PRINT("\n$ ");
