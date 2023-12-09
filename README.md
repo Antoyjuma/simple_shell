@@ -95,7 +95,7 @@ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 $(find . -type f -name "*.c") -o 
 ### Running the Shell
 * After building the shell, run it with the following command: 
 ```bash
-./simple_shell
+./hsh
 ```
 * This will start the shell, and you can interact with it by entering commands.
 
