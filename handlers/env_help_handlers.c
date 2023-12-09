@@ -7,7 +7,7 @@ void env_help(void)
 {
     char *msg = "env: env\n\tPrints the current environment.\n";
 
-    // Write the help message to STDOUT
+    /*  Write the help message to STDOUT */
     write(STDOUT_FILENO, msg, _strlen(msg));
 }
 
@@ -18,13 +18,13 @@ void setenv_help(void)
 {
     char *msg = "setenv: setenv [VARIABLE] [VALUE]\n\tInitializes a new";
 
-    // Write the first part of the help message to STDOUT
+    /*  Write the first part of the help message to STDOUT */
     write(STDOUT_FILENO, msg, _strlen(msg));
     msg = "environment variable, or modifies an existing one.\n\n";
-    // Write the second part of the help message to STDOUT
+    /*  Write the second part of the help message to STDOUT */
     write(STDOUT_FILENO, msg, _strlen(msg));
     msg = "\tUpon failure, prints a message to stderr.\n";
-    // Write the third part of the help message to STDOUT
+    /*  Write the third part of the help message to STDOUT */
     write(STDOUT_FILENO, msg, _strlen(msg));
 }
 
@@ -35,13 +35,13 @@ void unsetenv_help(void)
 {
     char *msg = "unsetenv: unsetenv [VARIABLE]\n\tRemoves an ";
 
-    // Write the first part of the help message to STDOUT
+    /*  Write the first part of the help message to STDOUT */
     write(STDOUT_FILENO, msg, _strlen(msg));
     msg = "environmental variable.\n\n\tUpon failure, prints a ";
-    // Write the second part of the help message to STDOUT
+    /*  Write the second part of the help message to STDOUT */
     write(STDOUT_FILENO, msg, _strlen(msg));
     msg = "message to stderr.\n";
-    // Write the third part of the help message to STDOUT
+    /*  Write the third part of the help message to STDOUT */
     write(STDOUT_FILENO, msg, _strlen(msg));
 }
 
@@ -53,7 +53,7 @@ void unsetenv_help(void)
  */
 int display_help(char **cmd, __attribute__((unused))int st)
 {
-    // Check for each specific help command and call the corresponding function
+    /*  Check for each specific help command and call the corresponding function */
     if (!cmd[1])
         all_help();
     else if (_strcmp(cmd[1], "alias") == 0)

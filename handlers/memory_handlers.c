@@ -1,4 +1,4 @@
-#include "official0mega.h"
+#include "../include/shell.h"
 
 /**
  * _realloc - Reallocates a memory block using malloc and free.
@@ -12,18 +12,18 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
 	void *result;
 
-	// If the new size is the same as the old size, return the original pointer
+	/*  If the new size is the same as the old size, return the original pointer */
 	if (new_size == old_size)
 		return (ptr);
 	
-	// If the new size is 0 and the pointer is not NULL, free the pointer and return NULL
+	/*  If the new size is 0 and the pointer is not NULL, free the pointer and return NULL */
 	if (new_size == 0 && ptr)
 	{
 		free(ptr);
 		return (NULL);
 	}
 
-	// Allocate memory for the result with the new size
+	/*  Allocate memory for the result with the new size */
 	result = malloc(new_size);
 	if (result == NULL)
 	{
@@ -31,7 +31,7 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 		return (NULL);
 	}
 
-	// If the original pointer is NULL, fill the result with null bytes
+	/*  If the original pointer is NULL, fill the result with null bytes */
 	if (ptr == NULL)
 	{
 		fill_array(result, '\0', new_size);
@@ -39,12 +39,12 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 	}
 	else
 	{
-		// Copy the data from the original pointer to the result
+		/*  Copy the data from the original pointer to the result */
 		_memcpy(result, ptr, old_size);
 		free(ptr);
 	}
 
-	return (result); // Return the pointer to the reallocated memory
+	return (result); /*  Return the pointer to the reallocated memory */
 }
 
 /**
@@ -58,8 +58,8 @@ void free_mem(char **cmd, char *line)
 {
 	free(cmd);
 	free(line);
-	cmd = NULL; // Set the command pointer to NULL after freeing
-	line = NULL; // Set the line pointer to NULL after freeing
+	cmd = NULL; /*  Set the command pointer to NULL after freeing */
+	line = NULL; /*  Set the line pointer to NULL after freeing */
 }
 
 /**
@@ -74,7 +74,7 @@ char *_memcpy(char *dest, char *src, unsigned int n)
 {
 	unsigned int i;
 
-	// Iterate through each byte and copy from source to destination
+	/*  Iterate through each byte and copy from source to destination */
 	for (i = 0; i < n; i++)
 	{
 		dest[i] = src[i];
@@ -95,7 +95,7 @@ void *fill_array(void *a, int el, unsigned int len)
 	char *p = a;
 	unsigned int i = 0;
 
-	// Fill the array with the constant byte
+	/*  Fill the array with the constant byte */
 	while (i < len)
 	{
 		*p = el;
@@ -116,19 +116,19 @@ void *_calloc(unsigned int size)
 	char *a;
 	unsigned int i;
 
-	// Check if the size is 0, return NULL if true
+	/*  Check if the size is 0, return NULL if true */
 	if (size == 0)
 		return (NULL);
 
-	// Allocate memory for the array
+	/*  Allocate memory for the array */
 	a = malloc(size);
 	if (a == NULL)
 		return (NULL);
 
-	// Initialize the allocated memory to zero
+	/*  Initialize the allocated memory to zero */
 	for (i = 0; i < size; i++)
 	{
 		a[i] = '\0';
 	}
-	return (a); // Return the pointer to the allocated and initialized memory
+	return (a); /*  Return the pointer to the allocated and initialized memory */
 }

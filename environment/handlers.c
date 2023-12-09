@@ -6,14 +6,14 @@
  */
 void set_environ(char **envir)
 {
-	// Declare variable
+	/*  Declare variable */
 	int crt_envr;
 
-	// Iterate through the global 'environ' array and copy each environment variable
+	/*  Iterate through the global 'environ' array and copy each environment variable */
 	for (crt_envr = 0; environ[crt_envr]; crt_envr++)
 		envi[crt_envr] = _strdup(environ[crt_envr]);
 
-	// Set the last element of the array to NULL to indicate the end
+	/*  Set the last element of the array to NULL to indicate the end */
 	envir[crt_envr] = NULL;
 }
 
@@ -23,10 +23,10 @@ void set_environ(char **envir)
  */
 void free_environ(char **env)
 {
-	// Declare variable
+	/*  Declare variable */
 	int crt_envr;
 
-	// Iterate through the array of environment variables and free each allocated memory
+	/*  Iterate through the array of environment variables and free each allocated memory */
 	for (crt_envr = 0; env[crt_envr]; crt_envr++)
 	{
 		free(env[crt_envr]);

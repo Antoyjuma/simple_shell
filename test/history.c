@@ -1,4 +1,4 @@
-#include "shell.h"
+#include "../include/shell.h"
 
 /**
  * history - Writes user inputs to a history file

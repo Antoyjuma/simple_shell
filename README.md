@@ -89,6 +89,10 @@ To build the shell, use the provided Makefile. Open a terminal and navigate to t
 find . -type f -name "*.c" -exec gcc -Wall -Werror -Wextra -pedantic -std=gnu89 {} -o {}.out \;
 or
 gcc -Wall -Werror -Wextra -pedantic -std=gnu89 $(find . -type f -name "*.c") -o hsh
+
+##To Fix all C++ Comments (//) to (/**/) 
+find . -name '*.c' -exec sed -i 's://\(.*\)$:/* \1 */:' {} +
+
 ```
 * This will compile the source code and generate the executable.
 
