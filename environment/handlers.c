@@ -12,8 +12,8 @@ void set_environ(char **envir)
 
 	/*  Iterate through the global 'environ' array and copy each environment variable
  */
-	for (crt_envr = 0; environ[crt_envr]; crt_envr++)
-		envi[crt_envr] = _strdup(environ[crt_envr]);
+	for (crt_envr = 0; envir[crt_envr]; crt_envr++)
+		envir[crt_envr] = _strdup(envir[crt_envr]);
 
 	/*  Set the last element of the array to NULL to indicate the end
  */
