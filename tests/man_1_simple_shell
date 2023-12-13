@@ -47,8 +47,7 @@ consisting only of alphanumeric characters and underscores, and beginning with a
 A
 .I token
 that performs a control function. It is one of the
-following symbols:
-.if t \fB|| && ; <newline>
+following symbols: \fB || && ;
 
 .SH SHELL GRAMMAR
 .SS Simple Commands
@@ -258,18 +257,23 @@ The \fBsimple_shell\fP executable
 The \fBsimple_shell\fP history file
 .PD
 
-.SH Contributors_Authors
-Samson Tedla, ALX
+.SH AUTHORS
+Bezaleel Olakunori, ALX
 .br
-samitedla23@gmail.com
+bezaleeloci@gmail.com
 .PP
-Yohannes Zewdu, ALX
+Elmahdi Mamoun, ALX
 .br
-yohannes.z251@gmail.com
+mamounelmahdi1962@gmail.com
 
 .SH SEE ALSO
 .PD 0
 .TP
 \fIsh\fP(1), \fIbash\fP(1), \fIksh\fP(1), \fIcsh\fP(1)
 .PD
+
+.SH BUG REPORTS
+Report
+.SB simple_shell
+bugs to <https://github.com/Elmahdi1962/simple_shell/issues>
 

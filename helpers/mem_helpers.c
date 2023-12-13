@@ -1,4 +1,4 @@
-#include "../include/shell.h"
+#include "../include/main.h"
 
 /**
  * _realloc - Reallocates a memory block
