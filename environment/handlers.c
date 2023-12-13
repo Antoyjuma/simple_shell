@@ -1,23 +1,22 @@
+#include <stdlib.h>
+#include <string.h>
 #include "../include/shell.h"
 
 /**
  * set_environ - Creates an array of Environment Variables.
- * @envi: Array to store Environment Variables.
+ * @envir: Array to store Environment Variables.
  */
 void set_environ(char **envir)
 {
-	/*  Declare variable
- */
-	int crt_envr;
+    /* Declare variable */
+    int crt_envr;
 
-	/*  Iterate through the global 'environ' array and copy each environment variable
- */
-	for (crt_envr = 0; envir[crt_envr]; crt_envr++)
-		envir[crt_envr] = _strdup(envir[crt_envr]);
+    /* Iterate through the global 'environ' array and copy each environment variable */
+    for (crt_envr = 0; envir[crt_envr]; crt_envr++)
+        envir[crt_envr] = strdup(envir[crt_envr]);
 
-	/*  Set the last element of the array to NULL to indicate the end
- */
-	envir[crt_envr] = NULL;
+    /* Set the last element of the array to NULL to indicate the end */
+    envir[crt_envr] = NULL;
 }
 
 /**
@@ -26,14 +25,12 @@ void set_environ(char **envir)
  */
 void free_environ(char **env)
 {
-	/*  Declare variable
- */
-	int crt_envr;
+    /* Declare variable */
+    int crt_envr;
 
-	/*  Iterate through the array of environment variables and free each allocated memory
- */
-	for (crt_envr = 0; env[crt_envr]; crt_envr++)
-	{
-		free(env[crt_envr]);
-	}
+    /* Iterate through the array of environment variables and free each allocated memory */
+    for (crt_envr = 0; env[crt_envr]; crt_envr++)
+    {
+        free(env[crt_envr]);
+    }
 }
