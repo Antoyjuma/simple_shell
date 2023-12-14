@@ -18,7 +18,6 @@ This is a simple UNIX command-line interpreter project for the ALX SE Foundation
 
 The Simple Shell project is a part of the ALX SE Foundations curriculum. It involves creating a basic UNIX shell that can interpret and execute commands, handle built-in functionalities like `exit` and `env`, and support various advanced features such as logic operators and comments.
 
-## Project Structure
 ```bash
 simple_shell
 │
@@ -26,48 +25,48 @@ simple_shell
 ├── Makefile
 ├── README.md
 ├── advanced
-│   ├── parse_cmd.c
-│   ├── path_finders.c
-│   ├── stdin_cmd_exec.c
-│   └── strtok.c
-├── builtins
-│   ├── alias.c
-│   ├── builtin_check_handlers.c
-│   ├── builtin_commands.c
-│   ├── builtin_exec.c
-│   ├── builtin_functions.c
-│   ├── builtin_helpers.c
-│   ├── getline.c
-│   ├── setenv.c
-│   └── unsetenv.c
-├── comments
-│   └── comments.c
-├── environment
-│   └── handlers.c
-├── handlers
-│   ├── env_all_helpers.c
-│   ├── env_help_handlers.c
-│   ├── error_handlers.c
-│   ├── file_handlers.c
-│   └── memory_handlers.c
-├── include
-│   └── shell.h
-├── inputs
-├── logic_operators
-│   └── logical_operators.c
-├── src
-│   ├── builtin.c
-│   ├── execute.c
-│   ├── helper_function.c
+│   ├── history_manager.c
+│   ├── line_reader.c
 │   ├── parser.c
-│   ├── prompt.c
-│   └── shell.c
-└── tests
-    ├── test_scripts
-    │   └── (shell scripts for testing)
-    ├── test_shell.c
-    └── history.c
-
+│   └── tokenizer.c
+├── controllers
+│   ├── shell_cmds_0.c
+│   ├── shell_cmds_1.c
+│   ├── shell_cmds_alias.c
+│   ├── shell_cmds_cd.c
+│   ├── shell_cmds_help_0.c
+│   └── shell_cmds_help_1.c
+├── environment
+│   ├── executor.c
+│   ├── expansion.c
+│   └── expansion_helpers.c
+├── handlers
+│   ├── alias_manager.c
+│   └── alias_substitution.c
+├── helpers
+│   ├── cli_helpers_0.c
+│   ├── cmd_t_helpers.c
+│   ├── env_var_helpers.c
+│   ├── io_helpers.c
+│   ├── mem_helpers.c
+│   ├── path_helper.c
+│   └── token_helper.c
+├── include
+│   ├── main.h
+│   └── main_types.h
+├── src
+│   └── simple_shell.c
+├── tests
+│   └── man_1_simple_shell
+└── utils
+    ├── utils_str_0.c
+    ├── utils_str_1.c
+    ├── utils_str_2.c
+    ├── utils_str_3.c
+    ├── utils_validator_0.c
+    ├── utils_validator_1.c
+    ├── utils_validator_2.c
+    └── utils_validator_3.c
 ```
 
 
