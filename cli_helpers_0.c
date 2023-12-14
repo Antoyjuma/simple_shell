@@ -1,4 +1,4 @@
-#include "../include/main.h"
+#include "main.h"
 
 /**
  * get_next_command - Gets the next command that can be executed by the shell

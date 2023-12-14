@@ -1,4 +1,4 @@
-#include "../include/main.h"
+#include "main.h"
 
 /**
  * adjust_block - Adjusts a block of memory to allow additional bytes

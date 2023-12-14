@@ -1,4 +1,4 @@
-#include "../include/main.h"
+#include "main.h"
 
 /**
  * get_env_var - Retrieves the value of an environment variable

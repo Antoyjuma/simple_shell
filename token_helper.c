@@ -1,4 +1,4 @@
-#include "../include/main.h"
+#include "main.h"
 
 /**
  * add_token_to_end - Adds a token to the end of a list

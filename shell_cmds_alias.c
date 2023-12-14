@@ -1,4 +1,4 @@
-#include "../include/main.h"
+#include "main.h"
 
 /**
  * sc_alias - Creates an alias for a command string, prints all the \

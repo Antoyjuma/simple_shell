@@ -1,4 +1,4 @@
-#include "../include/main.h"
+#include "main.h"
 
 /* The array of aliases in this shell program */
 static alias_t **Alias_List;

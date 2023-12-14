@@ -1,4 +1,4 @@
-#include "../include/main.h"
+#include "main.h"
 
 /**
  * is_valid_uint - Checks if the given string is a valid unsigned integer

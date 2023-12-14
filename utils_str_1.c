@@ -1,4 +1,4 @@
-#include "../include/main.h"
+#include "main.h"
 
 /**
  * str_eql - Checks if the left string is equal to the right string

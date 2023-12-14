@@ -1,4 +1,4 @@
-#include "../include/main.h"
+#include "main.h"
 
 /* The modifiable environment variable for this shell program */
 static char **Envp;

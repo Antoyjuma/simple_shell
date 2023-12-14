@@ -1,4 +1,4 @@
-#include "../include/main.h"
+#include "main.h"
 
 /* The array of names of aliases that have been expanded */
 static char **expanded_aliases;
