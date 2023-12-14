@@ -85,12 +85,7 @@ simple_shell
 To build the shell, use the provided Makefile. Open a terminal and navigate to the project root directory. Run the following command:
 
 ```bash
-find . -type f -name "*.c" -exec gcc -Wall -Werror -Wextra -pedantic -std=gnu89 {} -o {}.out \;
-or
-gcc -Wall -Werror -Wextra -pedantic -std=gnu89 $(find . -type f -name "*.c") -o hsh
-
-##To Fix all C++ Comments (//) to (/**/) 
-find . -name '*.c' -exec sed -i 's://\(.*\)$:/* \1 */:' {} +
+gcc -Wall -Werror -Wextra -pedantic -std=gnu89     src/*.c     advanced/*.c     controllers/*.c     environment/*.c     handlers/*.c     helpers/*.c     utils/*.c     -o hsh
 
 ```
 * This will compile the source code and generate the executable.
